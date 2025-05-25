@@ -15,18 +15,15 @@
     />
   </head>
   <body>
-    <!-- Write your HTML code here, you can delete everything withing the body tags -->
     <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./assets/img/rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+      <div class="card heart my-4 p-4 text-center m-auto position-relative" style="height:600px ; width: 400px;">
+        <span id="topSuit" class="position-absolute top-0 start-0">♦</span>
+        <span id="number" class="d-inline-block m-auto top-50 start-50 translate-middle fw-bold">A</span>
+       <span id="bottomSuit" class="position-absolute bottom-0 end-0">♦</span>
+
       </div>
+
+      <button id="btn" class="custom-button">Nueva carta</button>
     </div>
 
     <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->

@@ -1,5 +1,60 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
 body{
-    background: white;
+  background-color: #0f4336;
+}
+
+
+.card.heart #topSuit,
+.card.heart #bottomSuit,
+.card.diamond #topSuit,
+.card.diamond #bottomSuit {
+  color: red;
+}
+
+.card.spade #topSuit,
+.card.spade #bottomSuit,
+.card.club #topSuit,
+.card.club #bottomSuit {
+  color: black;
+}
+
+#bottomSuit {
+  display: inline-block;
+  transform: rotate(180deg);
+  font-size: 100px;
+  margin-right: 30px;
+}
+
+#topSuit {
+  font-size: 100px;
+  margin-left: 30px;
+}
+
+#number{
+  font-size: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.card{
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.custom-button {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
+}
+
+.custom-button:hover {
+  background-color: #883e1c;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
 }
