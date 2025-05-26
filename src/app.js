@@ -14,6 +14,11 @@ window.onload = function () {
   const bottomSuit = document.querySelector("#bottomSuit");
   const cardElement = document.querySelector(".card");
   const btn = document.querySelector("#btn");
+  const countdownEl = document.querySelector("#countdown");
+  const widthInput = document.querySelector("#widthInput");
+  const heightInput = document.querySelector("#heightInput");
+  const resizeBtn = document.querySelector("#resizeBtn");
+
 
 
 
@@ -21,14 +26,14 @@ window.onload = function () {
     const randomNumb = Math.floor(Math.random() * numbers.length);
     const randomSuits = Math.floor(Math.random() * suits.length);
     const selectedSuit = suits[randomSuits];
-    
+
     const suitClasses = {
       "♦": "diamond",
       "♥": "heart",
       "♠": "spade",
       "♣": "club"
     };
-    
+
     topSuit.innerHTML = selectedSuit;
     numb.innerHTML = numbers[randomNumb];
     bottomSuit.innerHTML = selectedSuit;
@@ -39,6 +44,34 @@ window.onload = function () {
 
   toggleCard();
 
-btn.addEventListener("click", toggleCard)
+  btn.addEventListener("click", () => {
+    toggleCard();
+    countdown = 10;
+  });
+
+  let countdown = 10;
+  countdownEl.textContent = `Nueva carta en ${countdown}`;
+
+
+  setInterval(() => {
+    countdown--;
+    countdownEl.textContent = `Nueva carta en ${countdown}`;
+
+    if (countdown === 0) {
+      toggleCard();
+      countdown = 10;
+    }
+  }, 1000);
+
+  resizeBtn.addEventListener("click", () =>{
+    const width = widthInput.value;
+    const height = heightInput.value;
+
+    cardElement.style.width = `${width}px`;
+    cardElement.style.height = `${height}px`;
+
+  })
 
 };
+
+

@@ -1,32 +1,44 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="./assets/img/4geeks.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
 
-    <!-- Fontawesome is our recomended library for icons -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <div class="container-fluid text-center">
-      <div class="card heart my-4 p-4 text-center m-auto position-relative" style="height:600px ; width: 400px;">
-        <span id="topSuit" class="position-absolute top-0 start-0">♦</span>
-        <span id="number" class="d-inline-block m-auto top-50 start-50 translate-middle fw-bold">A</span>
-       <span id="bottomSuit" class="position-absolute bottom-0 end-0">♦</span>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="./assets/img/4geeks.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hello Rigo with Vanilla.js</title>
 
-      </div>
+  <!-- Fontawesome is our recomended library for icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+</head>
 
-      <button id="btn" class="custom-button">Nueva carta</button>
+<body>
+  <div class="container-fluid text-center">
+    <div class="card heart my-4 p-4 text-center m-auto position-relative" style="height:600px ; width: 400px;">
+      <span id="topSuit" class="position-absolute top-0 start-0">♦</span>
+      <span id="number" class="d-inline-block m-auto top-50 start-50 translate-middle fw-bold">A</span>
+      <span id="bottomSuit" class="position-absolute bottom-0 end-0">♦</span>
     </div>
 
-    <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
-    <script type="module" src="/app.js"></script>
-  </body>
+    <button id="btn" class="custom-button">Nueva carta</button>
+
+    <p id="countdown" class="mt-3 fs-4 fw-bold text-center text-white"></p>
+
+    <div class="controls text-center my-4 text-white">
+      <label for="widthInput">Ancho (px):</label>
+      <input type="number" id="widthInput" value="400" class="mx-2" />
+
+      <label for="heightInput">Alto (px):</label>
+      <input type="number" id="heightInput" value="600" class="mx-2" />
+
+      <button id="resizeBtn" class="btn btn-primary ms-3">Aplicar tamaño</button>
+    </div>
+
+
+  </div>
+
+  <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
+  <script type="module" src="/app.js"></script>
+</body>
+
 </html>
